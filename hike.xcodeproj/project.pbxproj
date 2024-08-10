@@ -11,6 +11,10 @@
 		348F0EB62C6700B6000124F3 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348F0EB52C6700B6000124F3 /* ContentView.swift */; };
 		348F0EB82C6700B7000124F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348F0EB72C6700B7000124F3 /* Assets.xcassets */; };
 		348F0EBB2C6700B7000124F3 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 348F0EBA2C6700B7000124F3 /* Preview Assets.xcassets */; };
+		348F0EC22C67065A000124F3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348F0EC12C67065A000124F3 /* CardView.swift */; };
+		348F0EC52C670790000124F3 /* CustomBackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348F0EC42C670790000124F3 /* CustomBackgroundView.swift */; };
+		348F0EC82C670951000124F3 /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348F0EC72C670951000124F3 /* ColorExtension.swift */; };
+		348F0ECC2C67DD18000124F3 /* CustomButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 348F0ECB2C67DD18000124F3 /* CustomButtonView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +23,10 @@
 		348F0EB52C6700B6000124F3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		348F0EB72C6700B7000124F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		348F0EBA2C6700B7000124F3 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		348F0EC12C67065A000124F3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		348F0EC42C670790000124F3 /* CustomBackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBackgroundView.swift; sourceTree = "<group>"; };
+		348F0EC72C670951000124F3 /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
+		348F0ECB2C67DD18000124F3 /* CustomButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomButtonView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,10 +59,12 @@
 		348F0EB22C6700B6000124F3 /* hike */ = {
 			isa = PBXGroup;
 			children = (
+				348F0EC62C670931000124F3 /* Utility */,
 				348F0EB32C6700B6000124F3 /* hikeApp.swift */,
 				348F0EB52C6700B6000124F3 /* ContentView.swift */,
 				348F0EB72C6700B7000124F3 /* Assets.xcassets */,
 				348F0EB92C6700B7000124F3 /* Preview Content */,
+				348F0EC32C67076F000124F3 /* Component */,
 			);
 			path = hike;
 			sourceTree = "<group>";
@@ -65,6 +75,24 @@
 				348F0EBA2C6700B7000124F3 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		348F0EC32C67076F000124F3 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				348F0EC12C67065A000124F3 /* CardView.swift */,
+				348F0EC42C670790000124F3 /* CustomBackgroundView.swift */,
+				348F0ECB2C67DD18000124F3 /* CustomButtonView.swift */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		348F0EC62C670931000124F3 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				348F0EC72C670951000124F3 /* ColorExtension.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +166,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				348F0EB62C6700B6000124F3 /* ContentView.swift in Sources */,
+				348F0EC22C67065A000124F3 /* CardView.swift in Sources */,
 				348F0EB42C6700B6000124F3 /* hikeApp.swift in Sources */,
+				348F0ECC2C67DD18000124F3 /* CustomButtonView.swift in Sources */,
+				348F0EC52C670790000124F3 /* CustomBackgroundView.swift in Sources */,
+				348F0EC82C670951000124F3 /* ColorExtension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
