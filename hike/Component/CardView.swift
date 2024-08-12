@@ -11,6 +11,7 @@ struct CardView: View {
 //    PROPERTIES
     @State private var imageNumber: Int = 1
     @State private var randomNumber: Int = 1
+    @State private var isShowingSheet: Bool = false
     
 //    FUNCTIONS
     
@@ -43,9 +44,13 @@ struct CardView: View {
                         Spacer()
                         
                         Button {
-//                            print("The button was pressed")
+//                           ACTION: show a sheet
+                            isShowingSheet.toggle()
                         } label: {
                            CustomButtonView()
+                        }
+                        .sheet(isPresented: $isShowingSheet){
+                            SettingsView()
                         }
                     }
                     Text("Fun and enjoyable outdoor activity for friends and families")
