@@ -51,6 +51,8 @@ struct CardView: View {
                         }
                         .sheet(isPresented: $isShowingSheet){
                             SettingsView()
+                                .presentationDragIndicator(.visible)
+                                .presentationDetents([.medium, .large])
                         }
                     }
                     Text("Fun and enjoyable outdoor activity for friends and families")
