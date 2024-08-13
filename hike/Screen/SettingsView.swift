@@ -73,11 +73,15 @@ struct SettingsView: View {
 //               advanced label content
                CustomListRowView(rowLabel: "Application", rowIcon: "apps.iphone", rowContent: "HIKE", rowTintColor: .blue)
                
-               CustomListRowView(rowLabel: "Compatibility", rowIcon: "info.circle", rowContent: "HIKE", rowTintColor: .red)
+               CustomListRowView(rowLabel: "Compatibility", rowIcon: "info.circle", rowContent: "iOS, iPadOS", rowTintColor: .red)
                
-               CustomListRowView(rowLabel: "Technology", rowIcon: "swift", rowContent: "HIKE", rowTintColor: .orange)
+               CustomListRowView(rowLabel: "Technology", rowIcon: "gear", rowContent: "SwiftE", rowTintColor: .orange)
                
-               CustomListRowView(rowLabel: "Version", rowIcon: "ellipses.curlybraces", rowContent: "HIKE", rowTintColor: .blue)
+               CustomListRowView(rowLabel: "Version", rowIcon: "ellipsis.curlybraces", rowContent: "1.0", rowTintColor: .purple)
+               CustomListRowView(rowLabel: "Developer", rowIcon: "paintpalette", rowContent: "John Doe", rowTintColor: .mint)
+               CustomListRowView(rowLabel: "Designer", rowIcon: "paintpalette", rowContent: "Robert Petras", rowTintColor: .pink)
+               
+               CustomListRowView(rowLabel: "Website", rowIcon: "globe", rowTintColor: .indigo, rowLinkLabel: "Credo Academy", rowLinkDestination: "https://credo.academy")
      
            }
            
