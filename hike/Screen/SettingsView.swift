@@ -8,6 +8,12 @@
 import SwiftUI
 
 struct SettingsView: View {
+//    PROPERTIES
+    
+    private let alternateAppIcons: [String] = [
+    "AppIcon-MagnifyingGlass",
+    "Appicon-Map"
+    ]
     var body: some View {
         Text("Settings View")
         List {
@@ -58,6 +64,22 @@ struct SettingsView: View {
             .listRowSeparator(.hidden)
             
 //            SECTION: ICONS
+            Section(header: Text("Alternate Icons")) {
+                ScrollView(.horizontal, showsIndicators: false){
+                    Button {
+                        print("Icon was pressed")
+                    } label: {
+                        Image("AppIcon-Magnifying-Preview")
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 80, height: 80)
+                            .cornerRadius(16)
+                    }
+                    .buttonStyle(.borderless)
+                }
+                Text("Choose your favorite app icon from the collection above")
+                .listRowSeparator(.hidden)
+            }
     
 //            SECTION: ABOUT
            Section(
