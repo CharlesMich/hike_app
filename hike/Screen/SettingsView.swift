@@ -12,7 +12,13 @@ struct SettingsView: View {
     
     private let alternateAppIcons: [String] = [
     "AppIcon-MagnifyingGlass",
-    "Appicon-Map"
+    "AppIcon-Map",
+    "AppIcon-Mushroom",
+    "AppIcon-Backpack",
+    "AppIcon-Camera",
+    "AppIcon-Campfire"
+    
+    
     ]
     var body: some View {
         Text("Settings View")
@@ -66,21 +72,31 @@ struct SettingsView: View {
 //            SECTION: ICONS
             Section(header: Text("Alternate Icons")) {
                 ScrollView(.horizontal, showsIndicators: false){
-                    Button {
-                        print("Icon was pressed")
-                    } label: {
-                        Image("AppIcon-Magnifying-Preview")
-                            .resizable()
-                            .scaledToFit()
-                            .frame(width: 80, height: 80)
-                            .cornerRadius(16)
+                    HStack {
+                        ForEach(alternateAppIcons.indices, id: \.self) { item in
+                           
+                            Button {
+                                print("Icon was pressed")
+                            } label: {
+                                Image("\(alternateAppIcons[item])-Preview")
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 80, height: 80)
+                                    .cornerRadius(16)
+                            }
+                            .buttonStyle(.borderless)
+                        }
                     }
-                    .buttonStyle(.borderless)
                 }
+                .padding(.top, 12)
                 Text("Choose your favorite app icon from the collection above")
-                .listRowSeparator(.hidden)
+                    .frame(minWidth:0, maxWidth: .infinity)
+                    .multilineTextAlignment(.center)
+                    .foregroundColor(.secondary)
+                    .font(.footnote)
+                    .padding(.bottom, 12)
             }
-    
+            .listRowSeparator(.hidden)
 //            SECTION: ABOUT
            Section(
             header: Text("About the App"),
