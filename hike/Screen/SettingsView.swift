@@ -72,11 +72,17 @@ struct SettingsView: View {
 //            SECTION: ICONS
             Section(header: Text("Alternate Icons")) {
                 ScrollView(.horizontal, showsIndicators: false){
-                    HStack {
+                    HStack (spacing: 12){
                         ForEach(alternateAppIcons.indices, id: \.self) { item in
-                           
                             Button {
-                                print("Icon was pressed")
+                                print("Icon \(alternateAppIcons[item]) was pressed")
+                                UIApplication.shared.setAlternateIconName(alternateAppIcons[item]){ error in
+                                    if error != nil {
+                                        print("Failed request to update the app's icon: \(String(describing: error?.localizedDescription))")
+                                              } else {
+                                            print("Sucess you have changed the apps icon to \(alternateAppIcons[item])")
+                                        }
+                                }
                             } label: {
                                 Image("\(alternateAppIcons[item])-Preview")
                                     .resizable()
